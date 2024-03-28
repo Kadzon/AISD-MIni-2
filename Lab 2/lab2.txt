@@ -1,0 +1,16 @@
+#get imports
+from base_iris_lab2 import new_model, load_local, score, test
+
+# loading the data
+datasetid = load_local()
+
+# my model
+model_id = new_model(datasetid)
+
+
+r = [161.8,0,5.16,3.41,1.64,0.26,17.5956,0.4264,1.5131964809384164,6.3076923076923075,3.1463414634146343,13.115384615384615,3.5200000000000005,3.1500000000000004,5.33,18.33,53.21,4.194710955477147,0.6529931086925803,41.265478424015015]
+
+score(model_id, r)
+
+
+test(model_id, datasetid)
