@@ -1,0 +1,20 @@
+RESTful web API 
+This article discusses RESTful web API design, emphasizing the need for platform independence and service evolution to ensure that APIs can be used by any client and evolve without breaking existing client applications. REST (Representational State Transfer), proposed by Roy Fielding in 2000, is an architectural style for building distributed systems based on hypermedia, often implemented using HTTP. RESTful APIs should be designed around resources, using standard HTTP methods like GET, POST, PUT, PATCH, and DELETE, and maintaining a stateless request model for scalability.
+
+Key principles include organizing the API around business entities, using URIs that reflect the resource rather than the action, and maintaining simplicity and consistency in URI naming and structure. The use of hypermedia as the engine of application state (HATEOAS) is encouraged to enable navigation between related resources. The article also advises against creating overly complex URIs and "chatty" APIs that lead to excessive server load. It suggests denormalizing data to reduce the number of requests and avoiding dependencies between the API and underlying data sources to allow for future changes without impacting client applications. Non-resource scenarios should be handled with function-invoking HTTP requests sparingly.
+
+HTTP methods define the operations of a RESTful API, these are the main methods: 
+- GET: Retrieves a resource's representation from the specified URI.
+- POST: Creates a new resource at a specified URI/triggers operations that are not able to create resources.
+- PUT: Creates/replaces a resource at a specified URI with resource details.
+- PATCH: Applies a partial update to a resource at a specified URI.
+- DELETE: Removes a resource at a specified URI.
+It is important to conform to HTTP semantics, depending on the media types negotiation between the clients and servers. The following are the expected behaviours:
+- GET:  returns status 200 (OK) for successful fetches, 404 (Not Found) if the resource is absent.  204 (No Content) if no response body is necessary.
+- POST: returns 201 (Created) with the new resource's URI. It returns 200 or 204 for non-creating operations, depending on whether a response body is included.
+- PUT: returns 201 (Created) or 200/204, respectively. It can return 409 (Conflict) if updates cannot be applied.
+- PATCH: It handles various errors, like malformed documents or unapplicable changes, with corresponding status codes (e.g., 400, 409).
+- DELETE: Returns 204 (No Content) on successful deletion. 404 if the resource doesn’t exist.
+Asynchronous operations in APIs use HTTP status 202 (Accepted) for operations that are acknowledged but not immediately completed. It is important to provide a status endpoint for monitoring ongoing operations, with the potential for including time estimates or cancelation links.
+
+
