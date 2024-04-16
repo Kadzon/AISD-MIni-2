@@ -8,4 +8,4 @@ Nothing particularly hard, but ensuring that the callback functions point to the
 To better understand the predictions based on the input features, having a feature importance plot that will eank the importance of each feature and suggest which one is the most informative. This can be done by either a decision tree or random forest.
 
 4. What better ways can you link the back end Iris model and its results with the front-end Dash functions?
-Implenting error handling mechanisms in both falsk and Dash to handle scenariosn where the model prediction fails or an encounters error occurs and procide feedback to the user in the frontend.
+Implenting error handling mechanisms in both flask and Dash to handle scenariosn where the model prediction fails or an encounters error occurs and procide feedback to the user in the frontend.
