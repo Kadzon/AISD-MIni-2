@@ -1,0 +1,11 @@
+1. What did i find easy to do in Dash?
+Dash has an easy to follow guide to build interactive web applications. Building of the visualizations and graphs, was fun and easy to do because of my html experience.
+
+2. What was hard to implement?
+Nothing particularly hard, but ensuring that the callback functions point to the correct components.
+
+3. What other components or revised dashboard design would you suggest to better assist in explaining the behavior of the Iris model to a client?
+To better understand the predictions based on the input features, having a feature importance plot that will eank the importance of each feature and suggest which one is the most informative. This can be done by either a decision tree or random forest.
+
+4. What better ways can you link the back end Iris model and its results with the front-end Dash functions?
+Implenting error handling mechanisms in both falsk and Dash to handle scenariosn where the model prediction fails or an encounters error occurs and procide feedback to the user in the frontend.

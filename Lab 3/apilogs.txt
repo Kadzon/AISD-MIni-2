@@ -1,0 +1,118 @@
+(nirelftl) PS C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\Mini 2\Lab 3> flask --app connect run
+2024-04-16 12:36:36.965772: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+starting up iris model service
+ * Serving Flask app 'connect'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [16/Apr/2024 13:06:46] "POST /iris/dataset HTTP/1.1" 200 -
+C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\sklearn\preprocessing\_label.py:114: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+Epoch 1/10
+960/960 [==============================] - 4s 4ms/step - loss: 1.2428 - accuracy: 0.7802    
+Epoch 2/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.4931 - accuracy: 0.9229
+Epoch 3/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.3098 - accuracy: 0.9323
+Epoch 4/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.2564 - accuracy: 0.9458
+Epoch 5/10
+960/960 [==============================] - 4s 5ms/step - loss: 0.2075 - accuracy: 0.9573
+Epoch 6/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.2217 - accuracy: 0.9583
+Epoch 7/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1710 - accuracy: 0.9677
+Epoch 8/10
+960/960 [==============================] - 4s 5ms/step - loss: 0.1960 - accuracy: 0.9656
+Epoch 9/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1820 - accuracy: 0.9698
+Epoch 10/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.1839 - accuracy: 0.9688
+{'loss': [1.2427501678466797, 0.4930901527404785, 0.30975380539894104, 0.25643405318260193, 0.20745067298412323, 0.22171655297279358, 0.17099125683307648, 0.19598890841007233, 0.18203289806842804, 0.1838778704404831], 'accuracy': [0.7802083492279053, 0.9229166507720947, 0.9322916865348816, 0.9458333253860474, 0.9572916626930237, 0.9583333134651184, 0.9677083492279053, 0.965624988079071, 0.9697916507720947, 0.96875]}
+Test loss: 0.17024479806423187
+Test accuracy: 0.9750000238418579
+8/8 [==============================] - 0s 2ms/step
+Actual: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 2 1 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 1 2 2 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 2 1 2 1 1 1 1 2 2 2 2 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 2 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Predicted: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 1 1 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 1 2 1 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 1 1 2 1 1 1 1 2 2 2 1 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 1 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 1 1 0 2 2 0 1 1 2]
+Confusion matrix on test data is [[68  0  0]
+ [ 0 84  0]
+ [ 0  6 82]]
+Precision Score on test data is [1.         0.93333333 1.        ]
+Recall Score on test data is [1.         1.         0.93181818]
+127.0.0.1 - - [16/Apr/2024 13:07:36] "POST /iris/model HTTP/1.1" 200 -
+C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\sklearn\preprocessing\_label.py:114: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+Epoch 1/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1143 - accuracy: 0.9833
+Epoch 2/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.0989 - accuracy: 0.9750
+Epoch 3/10
+960/960 [==============================] - 2s 3ms/step - loss: 0.0905 - accuracy: 0.9781
+Epoch 4/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1377 - accuracy: 0.9812
+Epoch 5/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.1349 - accuracy: 0.9833 
+Epoch 6/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.0702 - accuracy: 0.9823
+Epoch 7/10
+960/960 [==============================] - 5s 5ms/step - loss: 0.1159 - accuracy: 0.9875
+Epoch 8/10
+960/960 [==============================] - 4s 5ms/step - loss: 0.0812 - accuracy: 0.9865
+Epoch 9/10
+960/960 [==============================] - 7s 7ms/step - loss: 0.1082 - accuracy: 0.9792
+Epoch 10/10
+960/960 [==============================] - 2s 2ms/step - loss: 0.0963 - accuracy: 0.9844
+{'loss': [0.11430401355028152, 0.09886618703603745, 0.09045238792896271, 0.1377447098493576, 0.13489985466003418, 0.07017584145069122, 0.11593953520059586, 0.08117365092039108, 0.10823438316583633, 0.09627023339271545], 'accuracy': [0.9833333492279053, 0.9750000238418579, 0.9781249761581421, 0.981249988079071, 0.9833333492279053, 0.9822916388511658, 0.987500011920929, 0.9864583611488342, 0.9791666865348816, 0.984375]}
+Test loss: 0.3200661540031433
+Test accuracy: 0.949999988079071
+8/8 [==============================] - 0s 2ms/step
+Actual: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 2 1 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 1 2 2 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 2 1 2 1 1 1 1 2 2 2 2 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 2 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Predicted: [0 0 0 0 2 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 2 2 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 2 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 2 2 2 2 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 2 2 2 0 1 1 0 2 1 2 2 2 2 1 1 1 1 2 2 2 2 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 2 2 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 2 2 0 0 1 2 1 2 0 2 0 2 0 2 1 2 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Confusion matrix on test data is [[68  0  0]
+ [ 0 72 12]
+ [ 0  0 88]]
+Precision Score on test data is [1.   1.   0.88]
+Recall Score on test data is [1.         0.85714286 1.        ]
+127.0.0.1 - - [16/Apr/2024 13:09:21] "PUT /iris/model/0?dataset=0 HTTP/1.1" 200 -
+1/1 [==============================] - 0s 57ms/step
+[[1.0000000e+00 1.4859821e-16 4.2135195e-36]]
+0
+127.0.0.1 - - [16/Apr/2024 13:11:57] "GET /iris/model/0?fields=250.6,0,4.87,3.85,1.5,0.37,18.7495,0.5549999999999999,1.264935064935065,4.054054054054054,3.2466666666666666,10.405405405405405,3.37,3.48,4.67,19.4,59.08,4.330069283510369,0.744983221287567,33.78288288288289 HTTP/1.1" 200 -
+C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\sklearn\preprocessing\_label.py:114: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+Test loss: 0.2928873300552368
+Test accuracy: 0.9549999833106995
+38/38 [==============================] - 0s 4ms/step
+Actual: [0 0 0 ... 2 2 2]
+Predicted: [0 0 0 ... 2 2 2]
+Confusion matrix on test data is [[400, 0, 0], [0, 346, 54], [0, 0, 400]]
+Precision Score on test data is [1.0, 1.0, 0.8810572687224669]
+Recall Score on test data is [1.0, 0.865, 1.0]
+127.0.0.1 - - [16/Apr/2024 13:12:08] "GET /iris/model/0/test?dataset=0 HTTP/1.1" 200 -

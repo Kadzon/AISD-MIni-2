@@ -1,0 +1,129 @@
+(nirelftl) PS C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\Mini 2\Lab 3> flask --app connect run
+2024-04-16 12:36:36.965772: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+starting up iris model service
+ * Serving Flask app 'connect'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [16/Apr/2024 12:37:35] "POST /iris/dataset HTTP/1.1" 200 -
+127.0.0.1 - - [16/Apr/2024 12:37:37] "POST /iris/dataset HTTP/1.1" 200 -
+WARNING:tensorflow:From C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2024-04-16 12:40:10.522891: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\sklearn\preprocessing\_label.py:114: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+Epoch 1/10
+WARNING:tensorflow:From C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+960/960 [==============================] - 5s 4ms/step - loss: 1.1803 - accuracy: 0.7312    
+Epoch 2/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.3405 - accuracy: 0.9031 
+Epoch 3/10
+960/960 [==============================] - 5s 5ms/step - loss: 0.2314 - accuracy: 0.9417
+Epoch 4/10
+960/960 [==============================] - 7s 7ms/step - loss: 0.1677 - accuracy: 0.9510
+Epoch 5/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1568 - accuracy: 0.9583
+Epoch 6/10
+960/960 [==============================] - 3s 4ms/step - loss: 0.1517 - accuracy: 0.9656
+Epoch 7/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1200 - accuracy: 0.9688
+Epoch 8/10
+960/960 [==============================] - 2s 3ms/step - loss: 0.1392 - accuracy: 0.9646
+Epoch 9/10
+960/960 [==============================] - 2s 3ms/step - loss: 0.1371 - accuracy: 0.9740
+Epoch 10/10
+960/960 [==============================] - 2s 3ms/step - loss: 0.1233 - accuracy: 0.9719
+{'loss': [1.1802605390548706, 0.3404887020587921, 0.23142144083976746, 0.16768759489059448, 0.1568402349948883, 0.15171995759010315, 0.1199556440114975, 0.13916119933128357, 0.13707368075847626, 0.1233096495270729], 'accuracy': [0.731249988079071, 0.903124988079071, 0.9416666626930237, 0.9510416388511658, 0.9583333134651184, 0.965624988079071, 0.96875, 0.9645833373069763, 0.9739583134651184, 0.971875011920929]}
+Test loss: 0.05743205174803734
+Test accuracy: 0.9750000238418579
+8/8 [==============================] - 0s 3ms/step
+Actual: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 2 1 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 1 2 2 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 2 1 2 1 1 1 1 2 2 2 2 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 2 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Predicted: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 1 2 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 2 2 1 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 2 1 2 1 1 1 1 2 2 2 1 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 1 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Confusion matrix on test data is [[68  0  0]
+ [ 0 82  2]
+ [ 0  4 84]]
+Precision Score on test data is [1.         0.95348837 0.97674419]
+Recall Score on test data is [1.         0.97619048 0.95454545]
+127.0.0.1 - - [16/Apr/2024 12:40:50] "POST /iris/model HTTP/1.1" 200 -
+C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\sklearn\preprocessing\_label.py:114: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+Epoch 1/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1174 - accuracy: 0.9781
+Epoch 2/10
+960/960 [==============================] - 3s 4ms/step - loss: 0.1188 - accuracy: 0.9740
+Epoch 3/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.0970 - accuracy: 0.9833
+Epoch 4/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1105 - accuracy: 0.9781
+Epoch 5/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1479 - accuracy: 0.9740
+Epoch 6/10
+960/960 [==============================] - 3s 4ms/step - loss: 0.1472 - accuracy: 0.9729
+Epoch 7/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.1155 - accuracy: 0.9792
+Epoch 8/10
+960/960 [==============================] - 3s 4ms/step - loss: 0.1422 - accuracy: 0.9792
+Epoch 9/10
+960/960 [==============================] - 3s 3ms/step - loss: 0.0994 - accuracy: 0.9750
+Epoch 10/10
+960/960 [==============================] - 4s 4ms/step - loss: 0.1138 - accuracy: 0.9823
+{'loss': [0.11737404763698578, 0.1188061311841011, 0.09703866392374039, 0.11051073670387268, 0.1478738784790039, 0.14718864858150482, 0.1155281588435173, 0.14216941595077515, 0.09943879395723343, 0.11376220732927322], 'accuracy': [0.9781249761581421, 0.9739583134651184, 0.9833333492279053, 0.9781249761581421, 0.9739583134651184, 0.9729166626930237, 0.9791666865348816, 0.9791666865348816, 0.9750000238418579, 0.9822916388511658]}
+Test loss: 0.04735012724995613
+Test accuracy: 0.9791666865348816
+8/8 [==============================] - 0s 2ms/step
+Actual: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 2 1 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 1 2 2 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 2 1 2 1 1 1 1 2 2 2 2 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 2 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Predicted: [0 0 0 0 1 1 0 2 2 2 0 2 0 0 0 1 2 0 0 2 2 2 2 2 2 0 1 0 2 2 0 0 2 1 1 2 0
+ 2 1 2 2 0 1 0 1 1 0 2 2 1 1 2 2 2 2 2 0 0 1 2 0 1 0 1 2 1 1 1 1 2 1 2 1 1
+ 1 2 2 2 0 1 2 2 1 0 0 2 0 1 1 2 1 1 2 0 1 0 2 2 1 1 1 0 1 2 0 0 0 2 0 2 0
+ 1 2 2 1 1 1 1 2 2 0 1 1 0 2 1 2 2 1 2 1 1 1 1 2 2 2 1 0 0 0 2 0 2 2 1 0 2
+ 1 2 2 1 1 0 1 0 0 1 0 1 0 1 2 0 0 0 1 0 2 2 2 2 2 2 1 1 1 1 2 0 1 1 1 2 1
+ 2 1 0 2 2 1 1 0 0 2 1 0 1 0 1 0 2 2 2 0 0 1 1 1 2 0 2 0 1 0 2 1 1 2 1 2 1
+ 2 2 1 0 0 0 2 1 1 2 1 0 2 2 0 1 1 2]
+Confusion matrix on test data is [[68  0  0]
+ [ 0 82  2]
+ [ 0  3 85]]
+Precision Score on test data is [1.         0.96470588 0.97701149]
+Recall Score on test data is [1.         0.97619048 0.96590909]
+127.0.0.1 - - [16/Apr/2024 12:41:32] "PUT /iris/model/0?dataset=0 HTTP/1.1" 200 -
+1/1 [==============================] - 0s 50ms/step
+[[1.0000000e+00 6.3609050e-14 1.6569866e-31]]
+0
+127.0.0.1 - - [16/Apr/2024 12:44:32] "GET /iris/model/0?fields=250.6,0,4.87,3.85,1.5,0.37,18.7495,0.5549999999999999,1.264935064935065,4.054054054054054,3.2466666666666666,10.405405405405405,3.37,3.48,4.67,19.4,59.08,4.330069283510369,0.744983221287567,33.78288288288289 HTTP/1.1" 200 -
+C:\Users\Nirel\Documents\Fall 2023\Spring 2024\AISD\nkadzo lab 2\nirelftl\Lib\site-packages\sklearn\preprocessing\_label.py:114: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+Test loss: 0.026072457432746887
+Test accuracy: 0.9900000095367432
+38/38 [==============================] - 0s 6ms/step
+Actual: [0 0 0 ... 2 2 2]
+Predicted: [0 0 0 ... 2 2 2]
+Confusion matrix on test data is [[400, 0, 0], [0, 394, 6], [0, 6, 394]]
+Precision Score on test data is [1.0, 0.985, 0.985]
+Recall Score on test data is [1.0, 0.985, 0.985]
+127.0.0.1 - - [16/Apr/2024 12:45:41] "GET /iris/model/0/test?dataset=1 HTTP/1.1" 200 -
