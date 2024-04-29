@@ -1,6 +1,7 @@
 import requests
 
-base_url = "http://172.17.0.2:4000/iris" #changed to docker ip address
+# base_url = "http://172.17.0.2:4000/iris" #changed to docker ip 
+base_url = " http://127.0.0.1:5000/iris" #changed to docker ip 
 
 def upload_dataset(file_path):
     url = f"{base_url}/dataset"
