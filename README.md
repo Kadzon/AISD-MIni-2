@@ -28,3 +28,16 @@
 - app_lab3.py - The Dash implementation
 - apilogs.txt - console logs of the flask
 - lab3logs.txt - console output of running the Dash app
+
+
+  ## Files for Lab 4
+- connect.py - Flask server code for the lab
+- app_lab3.py - The Dash implementation
+- base_iris_lab2.py - The backend model 
+- client.py - Client code for the lab
+- connect.py - Flask server code for the lab
+- lamda-fn-logs.csv - logs of AWS lambda function
+- Screenshots of AWS tables
+- - screenshot-iris-extended-retrain.png
+- - screenshot-iris-extended-1.png
+- - screenshot-iris-extended-2.png
