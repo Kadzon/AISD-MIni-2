@@ -1,4 +1,5 @@
-﻿# AISD-Mini-2
+﻿# AI Systems Design
+ 
 
 ## Files for Lab 1
 - api_log.txt - Console logs for the api
